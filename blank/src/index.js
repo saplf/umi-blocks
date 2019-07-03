@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
 import { connect } from 'dva';
+import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 
 import styles from './style.less';
 
@@ -16,9 +17,9 @@ class Page extends Component {
   render() {
     const { text } = this.props;
     return (
-      <div className={styles.container}>
+      <PageHeaderWrapper className={styles.container}>
         <Button>{text}</Button>
-      </div>
+      </PageHeaderWrapper>
     );
   }
 }
